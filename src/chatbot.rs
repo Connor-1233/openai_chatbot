@@ -29,7 +29,7 @@ struct Message {
     content: String,
 }
 
-pub async fn create_chat_completion(prompt: &str) -> Result<String, Box<dyn std::error::Error>> {
+pub async fn create_chat_completion(prompt: String) -> Result<String, Box<dyn std::error::Error>> {
     let client = Client::new();
     let api_key = env::var("OPENAI_API_KEY")?;
 
@@ -38,7 +38,9 @@ pub async fn create_chat_completion(prompt: &str) -> Result<String, Box<dyn std:
         messages: vec![
             ChatMessage {
                 role: "system".to_string(),
-                content: "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.".to_string(),
+                // content: "You are a poetic assistant, skilled in explaining complex programming concepts with creative flair.".to_string(),
+                content: "You are a sleep assistant, skilled in giving thorough explanations and responses to sleep questions.".to_string(),
+
             },
             ChatMessage {
                 role: "user".to_string(),
@@ -56,7 +58,7 @@ pub async fn create_chat_completion(prompt: &str) -> Result<String, Box<dyn std:
         .json::<ChatCompletionResponse>()
         .await?;
 
-    println!("\n\nParsed response: {:?}\n\n\n", res);
+    // println!("\n\nParsed response: {:?}\n\n\n", res);
 
     Ok(res.choices.get(0).map_or("No response".to_string(), |choice| choice.message.content.clone()))
 }
