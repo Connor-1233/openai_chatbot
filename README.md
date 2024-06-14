@@ -33,5 +33,24 @@ This project is a Rust-based chatbot that integrates with the OpenAI Chat API to
 
 2. **Clone the repository**:
    ```sh
-   git clone <(https://github.com/Connor-1233/openai_chatbot.git)l>
-   cd <openai_chatbot>
+   git clone https://github.com/Connor-1233/openai_chatbot.git
+   cd openai_chatbot
+
+3. **Run the Project**:
+   ```sh
+   cargo run
+   ```
+   - This command will run the program, and you can interact with the chatbot in the terminal through prompts.
+
+### Ways to Develop
+
+- Enhance User Interface: I want to create a graphical user interface (GUI) for the chatbot.
+- Add More Chatbot Features: I want to implement additional conversation patterns and responses.
+
+
+
+### Contributing
+If you'd like to contribute to this project, please fork the repository and create a pull request. Feel free to open issues for any bugs or feature requests.
+
+### License
+This project is licensed under the MIT License.
