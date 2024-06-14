@@ -33,5 +33,5 @@ This project is a Rust-based chatbot that integrates with the OpenAI Chat API to
 
 2. **Clone the repository**:
    ```sh
-   git clone <repository_url>
-   cd <repository_name>
+   git clone <(https://github.com/Connor-1233/openai_chatbot.git)l>
+   cd <openai_chatbot>
